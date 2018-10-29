@@ -16,7 +16,10 @@
     }
     function changeColor(target='#ball'){
       let trg = document.querySelector(target);
-      trg.style.backgroundColor = '#'+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16);
+      trg.style.backgroundColor = '#'+generateColor();
+    }
+    function generateColor(fun=rnd){
+      return fun().toString(16)+fun().toString(16)+fun().toString(16)+fun().toString(16)+fun().toString(16)+fun().toString(16);
     }
   </script>
 </head>
