@@ -10,7 +10,15 @@
       background-color: #e4D3E0;
     }
   </style>
-  <script></script>
+  <script>
+    function rnd(base=100){
+      return parseInt(Math.random() * base);
+    }
+    function changeColor(target='#ball'){
+      let trg = document.querySelector(target);
+      trg.style.backgroundColor = '#'+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16)+rnd().toString(16);
+    }
+  </script>
 </head>
 <body>
   <div id="ball"></div>
